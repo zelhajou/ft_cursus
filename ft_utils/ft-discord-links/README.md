@@ -4,7 +4,7 @@ Adds quick access links to 42 intra profiles directly from Discord usernames.
 
 ## Installation
 
-1. Download this folder 
+1. Download this folder as a zip from there [link](https://downgit.evecalm.com/#/home?url=https://github.com/zelhajou/ft_cursus/tree/main/ft_utils/ft-discord-links) and extract it
 2. Open Chrome/Brave and go to `chrome://extensions/`
 3. Enable "Developer mode" in the top right
 4. Click "Load unpacked"
