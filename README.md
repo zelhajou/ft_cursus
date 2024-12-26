@@ -1218,14 +1218,11 @@ Feel free to reach out to me if you have any questions, suggestions, or just wan
 
 
 <br>
-<br>
+
 <br>
 
 <hr>
 
-<br>
-<br>
-<br>
 <br>
 
 <div align="center">
