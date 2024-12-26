@@ -12,9 +12,7 @@ What makes 42 different is there are no teachers and no lectures. Instead, you f
 In this repo, you'll find my progress through the whole curriculum - from basic stuff like coding my own C library to more complex projects like building web servers and creating full-stack applications. Each project taught me something new about computer science and software development.
 
 ## Table of Contents
-<!--
-- 🏫 [About 42](#about-42)
--->
+
 - 📚 [Curriculum](#curriculum)
 - 🚀 [Projects](#projects)
     - [Core Programming Fundamentals](#core-programming-fundamentals)
@@ -30,20 +28,14 @@ In this repo, you'll find my progress through the whole curriculum - from basic 
 - 🛠️ [Skills](#skills)
 - 📊 [Stats](#stats)
 - 📝 [Blogs and Articles](#blogs-and-articles)
-- 📚 [Bookshelf](#bookshelf)
 - 📞 [Contact](#contact)
-<!--
-- 📓 [Study Notes](#study-notes)
--->
 
 <!--
-## About 42
-
-42 is a global education initiative that offers a new way of learning technology:
-no teachers, no classrooms, students learning from their fellow students (peer-to-peer learning), with a methodology that develops both computing and life skills. The 42cursus is free for whoever is approved in its selection process* - the so-called "Piscine" - becoming thus "cadets" (42's students).
+The 42cursus is free for whoever is approved in its selection process* - the so-called "Piscine" - becoming thus "cadets" (42's students).
 
 For further information about 42's **selection process** (the "Piscine"), please visit the [C Piscine repo](https://github.com/zelhajou/42-piscine_c).
 -->
+
 ## Curriculum
 
 The 42 curriculum is structured like a galaxy of projects, organized in concentric circles from basic to advanced:
@@ -70,17 +62,10 @@ The 42 curriculum is structured like a galaxy of projects, organized in concentr
 These tracks allow students to specialize in their preferred areas of software development and computer science.
 
 
-<!--
-<details>
-
-<summary><ins><b>Click to expand the 42 Holy Graph</b></ins></summary>
-
-</details>
--->
 ![42 Holy Graph](https://github.com/user-attachments/assets/ccabd3a7-bd07-4e37-ad30-b8fdeb8a363c)
 
 
-Note: The Holy Graph visualization above maps the complete curriculum structure. The turquoise nodes indicate completed projects, while grey nodes represent projects yet to be tackled. Each connection line shows the prerequisites needed to unlock the next project, with some levels offering multiple paths to choose from.
+**Note**: The Holy Graph visualization above maps the complete curriculum structure. The turquoise nodes indicate completed projects, while grey nodes represent projects yet to be tackled. Each connection line shows the prerequisites needed to unlock the next project, with some levels offering multiple paths to choose from.
 
 ## Projects
 
@@ -933,11 +918,7 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 
 </div>
 
-
-
-
 ## Skills
-
 
 ### 🔧 Programming & Development
 - **Languages:** C, C++, Bash, HTML/CSS, JavaScript
@@ -965,11 +946,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 - **Problem Solving:** Algorithm design, optimization, architectural planning
 
 [![My Skills](https://skillicons.dev/icons?i=c,cpp,linux,ubuntu,apple,bash,git,vscode,vim,emacs,md,latex,docker,github,figma,html,css,javascript,nginx)](https://skillicons.dev)
-
-
-
-
-
 
 
 <!--
@@ -1176,12 +1152,9 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 -->
 
 
-
 <!--
 ![13v6seyveh661](https://github.com/user-attachments/assets/943fff17-50fb-4a74-b6cd-8c369319dc0c)
 -->
-
-
 
 
 ## Stats
@@ -1210,20 +1183,6 @@ These are some of the blogs and articles I've written about my experiences at 42
 - [Building the 42-School Minitalk Project: A Guide to UNIX Signal-Based Communication in C](https://medium.com/@aaaikrz/building-the-42-school-minitalk-project-a-guide-to-unix-signal-based-communication-in-c-d11605643747)
 
 
-## [Bookshelf](https://github.com/zelhajou/1337-Bookshelf)
-
-These are some of the books I've read or plan to read to deepen my knowledge in computer science, programming, and other subjects.
-
-| **Name**| **Description**| **Category** | **Image** |
-| --------- | --------- | --------- | --------- |
-|  The Linux Programming Interface-Michael Kerrisk       | A comprehensive guide to system programming on the Linux platform by Michael Kerrisk. Covers system calls, libraries, and more. |  Computer System-level Programming | <img src="https://github.com/zelhajou/42-cursus/assets/39954629/e8ceb45e-9c83-47f0-a5f1-41cd01c0d642" width="200"> |
-| Advanced Programming in the Linux Environment | Explores advanced topics in Linux programming, offering insights into system calls, libraries, and techniques for efficient software development. |  Computer System-level Programming |  <img src="https://github.com/zelhajou/42-cursus/assets/39954629/08f28684-3f19-46fa-a284-ce64141b1bd5" width="200"> |
-| Operating System Concepts | A classic textbook on operating system principles and concepts, providing a foundational understanding of OS design and functionality. |  Computer System-level Programming |  <img src="https://github.com/zelhajou/42-cursus/assets/39954629/98c74ba3-665e-481d-828e-a492ec516fa3" width="200">  |
-| Networking Essentials - A CompTIA Network+ N10-008 Textbook | Provides comprehensive coverage of essential networking concepts and technologies required for CompTIA Network+ certification exam N10-008. Authored by Jeffrey S. Beasley and Piyasat Nilkaew, this textbook offers detailed explanations and practical examples to help readers understand networking fundamentals.| Computer Networking | <img src="https://github.com/zelhajou/42-cursus/assets/39954629/54e56797-b95e-490e-ac31-9a7f2d818f9e" width="200">  |
-| Computer Networks - A Tanenbaum - 5th edition | A comprehensive textbook on computer networking, authored by Andrew S. Tanenbaum, covering a wide range of networking topics including protocols, architectures, and applications. | Computer Networking | <img src="https://github.com/zelhajou/42-cursus/assets/39954629/6141d72a-e655-429d-84f8-c0bd06f42709" width="200">  |
-| UNIX Network Programming Volume 1, Third Edition: The Sockets Networking API | A classic reference on UNIX network programming, authored by W. Richard Stevens, offering in-depth coverage of the Sockets API and various networking concepts on UNIX-based systems | Computer System-level Programming | <img src="https://github.com/zelhajou/42-cursus/assets/39954629/9e14fd69-a5c7-46cb-9042-e1cb6a401f44" width="200"> |
-
-
 <!--
 ## Study Notes
 
@@ -1232,7 +1191,6 @@ These are some of the study notes and cheat sheets I've created to help me learn
 - Text editors and version control ([Emacs](https://github.com/zelhajou/42-cursus/blob/main/Computer%20Science/Computer%20Systems/Distributed%20Systems/Operating%20Systems/Linux/Text%20Editors/Emacs.md), [Vim](https://github.com/zelhajou/42-cursus/blob/main/Computer%20Science/Computer%20Systems/Distributed%20Systems/Operating%20Systems/Linux/Text%20Editors/VIM.md),  [Git](https://github.com/zelhajou/42-cursus/blob/main/Computer%20Science/Computer%20Systems/Distributed%20Systems/Operating%20Systems/Linux/Git.md))
 -  Programming languages ([C](https://github.com/zelhajou/42cursus-piscine-c/tree/main/C%20Cheat%20Sheet), [C++](https://github.com/zelhajou/42cursus-cpp-modules/tree/main/C%2B%2B%20Cheat%20Sheet))
 - Frontend web development ([HTML](https://github.com/zelhajou/42-cursus/tree/main/Software%20Engineering/Web%20Development/Frontend/Fundamentals/HTML), [CSS](https://github.com/zelhajou/42-cursus/tree/main/Software%20Engineering/Web%20Development/Frontend/Fundamentals/CSS))
-
 -->
 
 ## Contact
@@ -1264,11 +1222,6 @@ Feel free to reach out to me if you have any questions, suggestions, or just wan
 
 <div align="center">
 
-
 ![8rtdcmuc8jk51](https://github.com/user-attachments/assets/6d614260-90e0-43b1-afb7-97f8e8f9f247)
-
-<!--
-> Forrest Gump ghir tanjri 9ariban arrivederci 🏃
--->
 
 </div>
