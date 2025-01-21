@@ -25,12 +25,14 @@ jobs:
           GITLAB_URL: ${{ secrets.GITLAB_URL }}
           GITLAB_NAMESPACE: ${{ secrets.GITLAB_NAMESPACE }}
         run: |
-          echo "Adding GitLab remote for ${{ secrets.GITLAB_URL }}/${{ secrets.GITLAB_NAMESPACE }}/$GITHUB_REPOSITORY.git"
-          git remote add gitlab "${{ secrets.GITLAB_URL }}/${{ secrets.GITLAB_NAMESPACE }}/$GITHUB_REPOSITORY.git"
+          echo "Adding GitLab remote for $GITLAB_URL/$GITLAB_NAMESPACE/$GITHUB_REPOSITORY.git"
+          git remote add gitlab "$GITLAB_URL/$GITLAB_NAMESPACE/$GITHUB_REPOSITORY.git"
 
       - name: Push to GitLab
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+          GITLAB_URL: ${{ secrets.GITLAB_URL }}
+          GITLAB_NAMESPACE: ${{ secrets.GITLAB_NAMESPACE }}
         run: |
-          echo "Pushing to GitLab..."
-          git push --mirror "https://oauth2:${GITLAB_TOKEN}@${{ secrets.GITLAB_URL }}/${{ secrets.GITLAB_NAMESPACE }}/$GITHUB_REPOSITORY.git"
+          echo "Pushing to $GITLAB_URL/$GITLAB_NAMESPACE/$GITHUB_REPOSITORY.git"
+          git push --mirror "https://oauth2:$GITLAB_TOKEN@$GITLAB_URL/$GITLAB_NAMESPACE/$GITHUB_REPOSITORY.git"
