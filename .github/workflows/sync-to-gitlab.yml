@@ -15,19 +15,23 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Important: Fetch all history
+          fetch-depth: 0
 
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Push to GitLab
+      - name: Debug and Push to GitLab
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
           GITLAB_URL: ${{ secrets.GITLAB_URL }}
           GITLAB_NAMESPACE: ${{ secrets.GITLAB_NAMESPACE }}
         run: |
-          git remote add gitlab "https://${GITLAB_URL}/${GITLAB_NAMESPACE}/${GITHUB_REPOSITORY}.git"
-          echo "Pushing to gitlab remote..."
-          git push --mirror "https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${GITHUB_REPOSITORY}.git"
+          # Debug info (will be masked in logs)
+          echo "Repository name: ${GITHUB_REPOSITORY}"
+          echo "Target URL structure: https://${GITLAB_URL}/${GITLAB_NAMESPACE}/${GITHUB_REPOSITORY#*/}.git"
+          
+          # Add remote and push
+          git remote add gitlab "https://${GITLAB_URL}/${GITLAB_NAMESPACE}/${GITHUB_REPOSITORY#*/}.git"
+          git push --mirror "https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${GITHUB_REPOSITORY#*/}.git"
