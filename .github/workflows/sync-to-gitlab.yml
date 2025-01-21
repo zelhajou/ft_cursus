@@ -1,26 +1,21 @@
-name: Sync to GitLab
+name: Backup to GitLab
 
 on:
   push:
     branches:
       - main
+      - master
   schedule:
-    - cron: "0 2 * * *"
+    - cron: "0 2 * * *"  # Daily backup at 2 AM UTC
 
 jobs:
-  sync:
+  backup:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout the repository
+      - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Push to GitLab
         env:
@@ -28,15 +23,19 @@ jobs:
           GITLAB_URL: ${{ secrets.GITLAB_URL }}
           GITLAB_NAMESPACE: ${{ secrets.GITLAB_NAMESPACE }}
         run: |
-          # First try normal push
-          git remote add gitlab "https://${GITLAB_URL}/${GITLAB_NAMESPACE}/${GITHUB_REPOSITORY#*/}.git"
-          if ! git push --mirror "https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${GITHUB_REPOSITORY#*/}.git"; then
-            echo "Normal push failed, checking if repository exists..."
-            # If push failed, try creating project first (if it doesn't exist)
-            curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
-                 "https://${GITLAB_URL}/api/v4/projects/${GITLAB_NAMESPACE}%2F${GITHUB_REPOSITORY#*/}"
-            if [ $? -ne 0 ]; then
-              echo "Repository doesn't exist or other error occurred"
-              exit 1
-            fi
-          fi
+          # Configure git
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Extract repository name from GITHUB_REPOSITORY
+          REPO_NAME=${GITHUB_REPOSITORY#*/}
+          
+          # Create GitLab project if it doesn't exist
+          curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+               --data "name=${REPO_NAME}" \
+               --data "visibility=private" \
+               "https://${GITLAB_URL}/api/v4/projects" || true
+          
+          # Add GitLab remote and push
+          git remote add gitlab "https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${REPO_NAME}.git"
+          git push --mirror gitlab
