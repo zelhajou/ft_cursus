@@ -44,18 +44,18 @@ jobs:
             if [ -z "$response" ]; then
               log "ERROR: Empty response - $error_msg"
               return 1
-            }
+            fi
             
             if ! echo "$response" | jq -e . >/dev/null 2>&1; then
               log "ERROR: Invalid JSON response - $error_msg"
               return 1
-            }
+            fi
             
             if echo "$response" | jq -e '.error' >/dev/null 2>&1; then
               local error=$(echo "$response" | jq -r '.error')
               log "ERROR: API error - $error"
               return 1
-            }
+            fi
             
             return 0
           }
@@ -67,6 +67,7 @@ jobs:
                                "https://${GITLAB_URL}/api/v4/user")
             check_api_response "$response" "Failed to validate credentials" || return 1
             log "Credentials validated successfully"
+            return 0
           }
 
           # Function to get project ID
@@ -141,7 +142,7 @@ jobs:
           }
 
           # Main execution
-          {
+          main() {
             log "Configuring git..."
             git config --global user.name "github-actions[bot]"
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -188,4 +189,8 @@ jobs:
             fi
 
             log "Backup completed successfully"
-          } || handle_error "Script failed"
+            return 0
+          }
+
+          # Run main function with error handling
+          main || handle_error "Script failed"
