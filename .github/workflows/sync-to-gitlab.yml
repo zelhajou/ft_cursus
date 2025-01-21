@@ -6,7 +6,7 @@ on:
       - main
       - master
   schedule:
-    - cron: "0 2 * * *"  # Daily backup at 2 AM UTC
+    - cron: "0 2 * * *"
 
 jobs:
   backup:
@@ -30,26 +30,56 @@ jobs:
           # Extract repository name
           REPO_NAME=${GITHUB_REPOSITORY#*/}
           
-          # Check if project exists
-          PROJECT_EXISTS=$(curl -s --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
-                              "https://${GITLAB_URL}/api/v4/projects/${GITLAB_NAMESPACE}%2F${REPO_NAME}" \
-                              -w "%{http_code}" -o /dev/null)
+          # Get project ID
+          PROJECT_ID=$(curl -s --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+                           "https://${GITLAB_URL}/api/v4/projects/${GITLAB_NAMESPACE}%2F${REPO_NAME}" | \
+                           jq -r '.id')
           
-          if [ "$PROJECT_EXISTS" != "200" ]; then
-            # Create project if it doesn't exist
-            curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+          echo "Project ID: $PROJECT_ID"
+          
+          if [ ! -z "$PROJECT_ID" ]; then
+            # Temporarily unprotect the main branch
+            echo "Unprotecting main branch..."
+            curl -s --request DELETE \
+                 --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+                 "https://${GITLAB_URL}/api/v4/projects/${PROJECT_ID}/protected_branches/main"
+            
+            # Add GitLab remote
+            GITLAB_REPO_URL="https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${REPO_NAME}.git"
+            git remote add gitlab "$GITLAB_REPO_URL" || git remote set-url gitlab "$GITLAB_REPO_URL"
+            
+            # Push to GitLab
+            echo "Pushing to GitLab..."
+            git push --mirror gitlab
+            
+            # Re-protect the main branch
+            echo "Re-protecting main branch..."
+            curl -s --request POST \
+                 --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
                  --header "Content-Type: application/json" \
-                 --data "{\"name\":\"${REPO_NAME}\",\"path\":\"${REPO_NAME}\",\"namespace_id\":\"${GITLAB_NAMESPACE}\"}" \
+                 --data '{
+                   "name": "main",
+                   "push_access_level": 40,
+                   "merge_access_level": 40,
+                   "allow_force_push": false
+                 }' \
+                 "https://${GITLAB_URL}/api/v4/projects/${PROJECT_ID}/protected_branches"
+          else
+            echo "Project not found. Creating new project..."
+            # Create new project
+            curl -s --request POST \
+                 --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+                 --header "Content-Type: application/json" \
+                 --data "{
+                   \"name\": \"${REPO_NAME}\",
+                   \"path\": \"${REPO_NAME}\",
+                   \"visibility\": \"private\"
+                 }" \
                  "https://${GITLAB_URL}/api/v4/projects"
+            
+            # Add remote and push after short delay
+            sleep 5
+            GITLAB_REPO_URL="https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${REPO_NAME}.git"
+            git remote add gitlab "$GITLAB_REPO_URL"
+            git push --mirror gitlab
           fi
-          
-          # Add GitLab remote
-          GITLAB_REPO_URL="https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${REPO_NAME}.git"
-          git remote add gitlab "$GITLAB_REPO_URL" || git remote set-url gitlab "$GITLAB_REPO_URL"
-          
-          # Attempt to push (this will respect branch protections)
-          git push gitlab --mirror || {
-            echo "Standard push failed, trying force push..."
-            git push --force gitlab --all
-            git push --force gitlab --tags
-          }
