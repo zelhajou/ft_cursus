@@ -23,174 +23,88 @@ jobs:
           GITLAB_URL: ${{ secrets.GITLAB_URL }}
           GITLAB_NAMESPACE: ${{ secrets.GITLAB_NAMESPACE }}
         run: |
-          # Function for logging with timestamps
-          log() {
-            echo "[$(date +'%Y-%m-%d %H:%M:%S')] $1"
-          }
-
-          # Function to handle errors
-          handle_error() {
-            local exit_code=$?
-            local error_msg="$1"
-            log "ERROR: $error_msg (Exit code: $exit_code)"
-            return $exit_code
-          }
-
-          # Function to check GitLab API response
-          check_api_response() {
-            local response="$1"
-            local error_msg="$2"
-            
-            if [ -z "$response" ]; then
-              log "ERROR: Empty response - $error_msg"
-              return 1
-            fi
-            
-            if ! echo "$response" | jq -e . >/dev/null 2>&1; then
-              log "ERROR: Invalid JSON response - $error_msg"
-              return 1
-            fi
-            
-            if echo "$response" | jq -e '.error' >/dev/null 2>&1; then
-              local error=$(echo "$response" | jq -r '.error')
-              log "ERROR: API error - $error"
-              return 1
-            fi
-            
-            return 0
-          }
-
-          # Function to validate GitLab credentials
-          validate_credentials() {
-            log "Validating GitLab credentials..."
-            local response=$(curl -s --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
-                               "https://${GITLAB_URL}/api/v4/user")
-            check_api_response "$response" "Failed to validate credentials" || return 1
-            log "Credentials validated successfully"
-            return 0
-          }
-
+          # Configure git
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Extract repository name
+          REPO_NAME=${GITHUB_REPOSITORY#*/}
+          
           # Function to get project ID
           get_project_id() {
-            local retries=3
-            local wait=5
-            
-            for ((i=1; i<=retries; i++)); do
-              log "Attempting to get project ID (Attempt $i/$retries)..."
-              local response=$(curl -s --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
-                                 "https://${GITLAB_URL}/api/v4/projects/${GITLAB_NAMESPACE}%2F${REPO_NAME}")
-              
-              if check_api_response "$response" "Failed to get project ID"; then
-                local id=$(echo "$response" | jq -r '.id')
-                if [ "$id" != "null" ] && [ ! -z "$id" ]; then
-                  echo "$id"
-                  return 0
-                fi
-              fi
-              
-              if [ $i -lt $retries ]; then
-                log "Retrying in $wait seconds..."
-                sleep $wait
-              fi
-            done
-            
-            return 1
+            curl -s --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+                "https://${GITLAB_URL}/api/v4/projects/${GITLAB_NAMESPACE}%2F${REPO_NAME}" | \
+                jq -r '.id'
           }
-
+          
           # Function to configure project settings
           configure_project() {
             local project_id=$1
-            log "Configuring project settings for ID: $project_id"
+            echo "Configuring project settings..."
             
             # Configure project settings
-            log "Updating project settings..."
-            local response=$(curl -s --request PUT \
-                               --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
-                               --header "Content-Type: application/json" \
-                               "https://${GITLAB_URL}/api/v4/projects/${project_id}" \
-                               --data '{
-                                 "only_allow_merge_if_pipeline_succeeds": false,
-                                 "allow_merge_on_skipped_pipeline": true,
-                                 "restrict_user_defined_variables": false
-                               }')
-            
-            check_api_response "$response" "Failed to configure project settings" || return 1
-            
-            # Update branch protection
-            log "Updating branch protection rules..."
+            curl -s --request PUT \
+                 --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+                 --header "Content-Type: application/json" \
+                 --data '{
+                   "only_allow_merge_if_pipeline_succeeds": false,
+                   "allow_merge_on_skipped_pipeline": true,
+                   "restrict_user_defined_variables": false
+                 }' \
+                 "https://${GITLAB_URL}/api/v4/projects/${project_id}"
+                 
+            # Remove all existing branch protection
             curl -s --request DELETE \
                  --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
-                 "https://${GITLAB_URL}/api/v4/projects/${project_id}/protected_branches/main" || true
-            
-            sleep 2  # Small delay to ensure deletion is processed
-            
-            response=$(curl -s --request POST \
-                           --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
-                           --header "Content-Type: application/json" \
-                           "https://${GITLAB_URL}/api/v4/projects/${project_id}/protected_branches" \
-                           --data '{
-                             "name": "main",
-                             "push_access_level": 40,
-                             "merge_access_level": 40,
-                             "unprotect_access_level": 40,
-                             "allow_force_push": true
-                           }')
-            
-            check_api_response "$response" "Failed to update branch protection" || return 1
-            log "Project configuration completed successfully"
-            return 0
+                 "https://${GITLAB_URL}/api/v4/projects/${project_id}/protected_branches/main"
+                 
+            # Add updated branch protection
+            curl -s --request POST \
+                 --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+                 --header "Content-Type: application/json" \
+                 --data '{
+                   "name": "main",
+                   "push_access_level": 40,
+                   "merge_access_level": 40,
+                   "unprotect_access_level": 40,
+                   "allow_force_push": true
+                 }' \
+                 "https://${GITLAB_URL}/api/v4/projects/${project_id}/protected_branches"
           }
-
-          # Main execution
-          main() {
-            log "Configuring git..."
-            git config --global user.name "github-actions[bot]"
-            git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-            REPO_NAME=${GITHUB_REPOSITORY#*/}
-            log "Processing repository: $REPO_NAME"
-
-            validate_credentials || exit 1
-
+          
+          # Get or create project
+          PROJECT_ID=$(get_project_id)
+          
+          if [ "$PROJECT_ID" = "null" ] || [ -z "$PROJECT_ID" ]; then
+            echo "Creating new project..."
+            curl -s --request POST \
+                 --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+                 --header "Content-Type: application/json" \
+                 --data "{
+                   \"name\": \"${REPO_NAME}\",
+                   \"path\": \"${REPO_NAME}\",
+                   \"visibility\": \"private\",
+                   \"initialize_with_readme\": false
+                 }" \
+                 "https://${GITLAB_URL}/api/v4/projects"
+            
+            sleep 5  # Wait for project creation
             PROJECT_ID=$(get_project_id)
-            if [ $? -ne 0 ]; then
-              log "Creating new project..."
-              local response=$(curl -s --request POST \
-                                 --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
-                                 --header "Content-Type: application/json" \
-                                 "https://${GITLAB_URL}/api/v4/projects" \
-                                 --data "{
-                                   \"name\": \"${REPO_NAME}\",
-                                   \"path\": \"${REPO_NAME}\",
-                                   \"visibility\": \"private\"
-                                 }")
-              
-              check_api_response "$response" "Failed to create project" || exit 1
-              sleep 5
-              
-              PROJECT_ID=$(get_project_id)
-              [ $? -ne 0 ] && handle_error "Failed to get project ID after creation" && exit 1
-            fi
-
-            log "Project ID: $PROJECT_ID"
-            configure_project "$PROJECT_ID" || exit 1
-
-            log "Setting up Git remote..."
-            GITLAB_REPO_URL="https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${REPO_NAME}.git"
-            git remote add gitlab "$GITLAB_REPO_URL" 2>/dev/null || git remote set-url gitlab "$GITLAB_REPO_URL"
-
-            log "Fetching from GitLab..."
-            git fetch gitlab || true
-
-            log "Pushing to GitLab..."
-            if ! git push -f gitlab refs/remotes/origin/*:refs/heads/* refs/tags/*:refs/tags/*; then
-              handle_error "Failed to push to GitLab"
-              exit 1
-            fi
-
-            log "Backup completed successfully"
-            return 0
-          }
-
-          # Run main function with error handling
-          main || handle_error "Script failed"
+          fi
+          
+          echo "Project ID: $PROJECT_ID"
+          
+          # Configure project settings
+          configure_project "$PROJECT_ID"
+          
+          # Setup and push to GitLab
+          echo "Setting up Git remote..."
+          GITLAB_REPO_URL="https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${REPO_NAME}.git"
+          git remote add gitlab "$GITLAB_REPO_URL" || git remote set-url gitlab "$GITLAB_REPO_URL"
+          
+          echo "Fetching from GitLab..."
+          git fetch gitlab || true
+          
+          echo "Pushing to GitLab..."
+          # Push all refs without '--mirror' to avoid hidden ref issues
+          git push -f gitlab refs/remotes/origin/*:refs/heads/* refs/tags/*:refs/tags/*
