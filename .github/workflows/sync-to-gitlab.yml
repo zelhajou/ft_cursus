@@ -17,7 +17,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Push to GitLab
+      - name: Setup GitLab Backup
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
           GITLAB_URL: ${{ secrets.GITLAB_URL }}
@@ -27,15 +27,29 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Extract repository name from GITHUB_REPOSITORY
+          # Extract repository name
           REPO_NAME=${GITHUB_REPOSITORY#*/}
           
-          # Create GitLab project if it doesn't exist
-          curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
-               --data "name=${REPO_NAME}" \
-               --data "visibility=private" \
-               "https://${GITLAB_URL}/api/v4/projects" || true
+          # Check if project exists
+          PROJECT_EXISTS=$(curl -s --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+                              "https://${GITLAB_URL}/api/v4/projects/${GITLAB_NAMESPACE}%2F${REPO_NAME}" \
+                              -w "%{http_code}" -o /dev/null)
           
-          # Add GitLab remote and push
-          git remote add gitlab "https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${REPO_NAME}.git"
-          git push --mirror gitlab
+          if [ "$PROJECT_EXISTS" != "200" ]; then
+            # Create project if it doesn't exist
+            curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+                 --header "Content-Type: application/json" \
+                 --data "{\"name\":\"${REPO_NAME}\",\"path\":\"${REPO_NAME}\",\"namespace_id\":\"${GITLAB_NAMESPACE}\"}" \
+                 "https://${GITLAB_URL}/api/v4/projects"
+          fi
+          
+          # Add GitLab remote
+          GITLAB_REPO_URL="https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${REPO_NAME}.git"
+          git remote add gitlab "$GITLAB_REPO_URL" || git remote set-url gitlab "$GITLAB_REPO_URL"
+          
+          # Attempt to push (this will respect branch protections)
+          git push gitlab --mirror || {
+            echo "Standard push failed, trying force push..."
+            git push --force gitlab --all
+            git push --force gitlab --tags
+          }
