@@ -22,16 +22,21 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Debug and Push to GitLab
+      - name: Push to GitLab
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
           GITLAB_URL: ${{ secrets.GITLAB_URL }}
           GITLAB_NAMESPACE: ${{ secrets.GITLAB_NAMESPACE }}
         run: |
-          # Debug info (will be masked in logs)
-          echo "Repository name: ${GITHUB_REPOSITORY}"
-          echo "Target URL structure: https://${GITLAB_URL}/${GITLAB_NAMESPACE}/${GITHUB_REPOSITORY#*/}.git"
-          
-          # Add remote and push
+          # First try normal push
           git remote add gitlab "https://${GITLAB_URL}/${GITLAB_NAMESPACE}/${GITHUB_REPOSITORY#*/}.git"
-          git push --mirror "https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${GITHUB_REPOSITORY#*/}.git"
+          if ! git push --mirror "https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${GITHUB_REPOSITORY#*/}.git"; then
+            echo "Normal push failed, checking if repository exists..."
+            # If push failed, try creating project first (if it doesn't exist)
+            curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+                 "https://${GITLAB_URL}/api/v4/projects/${GITLAB_NAMESPACE}%2F${GITHUB_REPOSITORY#*/}"
+            if [ $? -ne 0 ]; then
+              echo "Repository doesn't exist or other error occurred"
+              exit 1
+            fi
+          fi
