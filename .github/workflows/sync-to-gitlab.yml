@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 2 * * *" # Optional: Runs daily at 2 AM UTC
+    - cron: "0 2 * * *"
 
 jobs:
   sync:
@@ -14,19 +14,13 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Important: Fetch all history
 
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Add GitLab as remote
-        env:
-          GITLAB_URL: ${{ secrets.GITLAB_URL }}
-          GITLAB_NAMESPACE: ${{ secrets.GITLAB_NAMESPACE }}
-        run: |
-          echo "Adding GitLab remote for $GITLAB_URL/$GITLAB_NAMESPACE/$GITHUB_REPOSITORY.git"
-          git remote add gitlab "$GITLAB_URL/$GITLAB_NAMESPACE/$GITHUB_REPOSITORY.git"
 
       - name: Push to GitLab
         env:
@@ -34,5 +28,6 @@ jobs:
           GITLAB_URL: ${{ secrets.GITLAB_URL }}
           GITLAB_NAMESPACE: ${{ secrets.GITLAB_NAMESPACE }}
         run: |
-          echo "Pushing to $GITLAB_URL/$GITLAB_NAMESPACE/$GITHUB_REPOSITORY.git"
-          git push --mirror "https://oauth2:$GITLAB_TOKEN@$GITLAB_URL/$GITLAB_NAMESPACE/$GITHUB_REPOSITORY.git"
+          git remote add gitlab "https://${GITLAB_URL}/${GITLAB_NAMESPACE}/${GITHUB_REPOSITORY}.git"
+          echo "Pushing to gitlab remote..."
+          git push --mirror "https://oauth2:${GITLAB_TOKEN}@${GITLAB_URL}/${GITLAB_NAMESPACE}/${GITHUB_REPOSITORY}.git"
