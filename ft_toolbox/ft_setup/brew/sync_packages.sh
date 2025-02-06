@@ -11,11 +11,32 @@ trim() {
     echo "$var"
 }
 
-# Check if package list exists
+# Function to add package to list if not already present
+add_to_list() {
+    local package="$1"
+    if ! grep -q "^${package}$" "$PACKAGE_LIST" 2>/dev/null; then
+        echo "$package" >> "$PACKAGE_LIST"
+        echo "Added $package to $PACKAGE_LIST"
+    fi
+}
+
+# Create package list if it doesn't exist
 if [ ! -f "$PACKAGE_LIST" ]; then
-    echo "Package list file ($PACKAGE_LIST) not found!"
-    exit 1
+    echo "Creating new package list file: $PACKAGE_LIST"
+    touch "$PACKAGE_LIST"
 fi
+
+# Add currently installed packages to the list
+echo "Checking currently installed packages..."
+echo "Adding formula packages..."
+brew list --formula | while read -r package; do
+    add_to_list "$package"
+done
+
+echo "Adding cask packages..."
+brew list --cask | while read -r package; do
+    add_to_list "$package"
+done
 
 echo "Syncing packages from $PACKAGE_LIST..."
 
@@ -32,7 +53,6 @@ while IFS= read -r line || [ -n "$line" ]; do
     # Check if package is already installed
     if ! brew list --formula | grep -q "^$package\$" && ! brew list --cask | grep -q "^$package\$"; then
         echo "Installing $package..."
-        
         # Try installing as formula first, then as cask if that fails
         if ! brew install "$package" 2>/dev/null; then
             echo "Attempting to install $package as a cask..."
