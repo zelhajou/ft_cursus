@@ -1,42 +1,32 @@
-# VS Code configuration for 42 ToolBox
-# Store VS Code settings on external drive
+# VS Code configuration for 42 ToolBox - Simplified version
+# Automatically setup VS Code to use external drive
 
-# Set VS Code directories
-export VSCODE_EXTENSIONS="/Volumes/BrainFuck/42_ToolBox/vscode/extensions"
-export VSCODE_USER_DATA_DIR="/Volumes/BrainFuck/42_ToolBox/vscode/user-data"
+# External drive paths
+TOOLBOX_DIR="/Volumes/BrainFuck/42_ToolBox"
+VSCODE_EXT_DIR="$TOOLBOX_DIR/vscode/extensions"
 
-# Create directories if they don't exist
-mkdir -p "$VSCODE_EXTENSIONS"
-mkdir -p "$VSCODE_USER_DATA_DIR"
+# Ensure directories exist (no copying)
+mkdir -p "$VSCODE_EXT_DIR"
 
-# Create a launcher script for VS Code
-cat > "/Volumes/BrainFuck/42_ToolBox/bin/code-launcher.sh" << 'EOF'
-#!/bin/bash
-# VS Code launcher that uses external drive for extensions
-
-VSCODE_EXTENSIONS="/Volumes/BrainFuck/42_ToolBox/vscode/extensions"
-VSCODE_USER_DATA_DIR="/Volumes/BrainFuck/42_ToolBox/vscode/user-data"
-
-# Ensure directories exist
-mkdir -p "$VSCODE_EXTENSIONS"
-mkdir -p "$VSCODE_USER_DATA_DIR"
-
-# Launch VS Code
-if [ $# -eq 0 ]; then
-  # No arguments
-  open -a "Visual Studio Code" --args --extensions-dir="$VSCODE_EXTENSIONS" --user-data-dir="$VSCODE_USER_DATA_DIR"
-else
-  # With arguments (files to open)
-  open -a "Visual Studio Code" "$@" --args --extensions-dir="$VSCODE_EXTENSIONS" --user-data-dir="$VSCODE_USER_DATA_DIR"
+# Setup symlink quietly without copying files
+if [ -d "$TOOLBOX_DIR" ]; then
+  # Only create symlink if it doesn't exist
+  if [ ! -L "$HOME/.vscode/extensions" ]; then
+    echo "Setting up VS Code extensions symlink..."
+    
+    # Backup existing directory if needed
+    if [ -d "$HOME/.vscode/extensions" ]; then
+      mv "$HOME/.vscode/extensions" "$HOME/.vscode/extensions.old"
+    else
+      mkdir -p "$HOME/.vscode"
+    fi
+    
+    # Create the symlink
+    ln -sf "$VSCODE_EXT_DIR" "$HOME/.vscode/extensions"
+    echo "VS Code symlink created."
+  fi
 fi
-EOF
 
-# Make it executable
-mkdir -p "/Volumes/BrainFuck/42_ToolBox/bin"
-chmod +x "/Volumes/BrainFuck/42_ToolBox/bin/code-launcher.sh"
-
-# Create alias for the launcher
-alias code="/Volumes/BrainFuck/42_ToolBox/bin/code-launcher.sh"
-
-# Original VS Code command
+# Create aliases
+alias code="open -a 'Visual Studio Code'"
 alias default-code="open -a 'Visual Studio Code'"

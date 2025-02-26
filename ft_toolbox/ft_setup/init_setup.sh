@@ -129,7 +129,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-alias code="open -a 'Visual Studio Code'"
 alias ll='ls -la'
 alias g='git'
 alias c='clear'
@@ -144,7 +143,14 @@ source /Volumes/BrainFuck/42_ToolBox/configs/shell/brew_config.sh
 source /Volumes/BrainFuck/42_ToolBox/configs/shell/npm_config.sh
 
 # Add VS Code config
-source /Volumes/BrainFuck/42_ToolBox/configs/shell/vscode_config.sh"
+source /Volumes/BrainFuck/42_ToolBox/configs/shell/vscode_config.sh
+
+
+vscode_clean() {
+  echo "Cleaning VS Code caches..."
+  rm -rf ~/Library/Caches/com.microsoft.VSCode*
+  echo "Done."
+}
 
 EOL
 
