@@ -1200,9 +1200,9 @@ Feel free to reach out to me if you have any questions, suggestions, or just wan
 <a href="mailto:zelhajou@gmail.com">
     <img align="left" alt="Gmail" width="18px" src="https://cdn.simpleicons.org/gmail/000/fff" />
 </a>
-<a href="https://www.linkedin.com/in/zelhajou/">
+<!-- <a href="https://www.linkedin.com/in/zelhajou/">
     <img align="left" alt="Linkedin" width="18px" src="https://cdn.simpleicons.org/linkedin/000/fff" />
-</a>
+</a> -->
 <a href="https://twitter.com/zelhajou">
     <img align="left" alt="Twitter" width="18px" src="https://cdn.simpleicons.org/x/000/fff" />
 </a>
