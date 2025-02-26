@@ -27,4 +27,8 @@ tree
 xz
 z3
 zstd
+krb5
+postgresql@14
+superfile
+stringsfile
 bitwarden

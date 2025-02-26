@@ -106,6 +106,7 @@ setup_zsh() {
 
     # Configure .zshrc
     cat > "$HOME/.zshrc" << 'EOL'
+ZSH_DISABLE_COMPFIX="true"
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
@@ -114,17 +115,37 @@ plugins=(
     git
     zsh-autosuggestions
     zsh-syntax-highlighting
+    docker
+    npm
+    node
+    vscode
+    web-search
+    copypath
+    copyfile
+    dirhistory
+    history
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+alias code="open -a 'Visual Studio Code'"
 alias ll='ls -la'
 alias g='git'
 alias c='clear'
 
 # Set default editor
 export EDITOR='vim'
+
+# Add Homebrew to PATH
+source /Volumes/BrainFuck/42_ToolBox/configs/shell/brew_config.sh
+
+# Add NPM config
+source /Volumes/BrainFuck/42_ToolBox/configs/shell/npm_config.sh
+
+# Add VS Code config
+source /Volumes/BrainFuck/42_ToolBox/configs/shell/vscode_config.sh"
+
 EOL
 
     # Change default shell to zsh if it's not already
