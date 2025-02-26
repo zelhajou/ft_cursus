@@ -9,19 +9,34 @@ export VSCODE_USER_DATA_DIR="/Volumes/BrainFuck/42_ToolBox/vscode/user-data"
 mkdir -p "$VSCODE_EXTENSIONS"
 mkdir -p "$VSCODE_USER_DATA_DIR"
 
-# Simple function to launch VS Code with settings from external drive
-vscode() {
-  # If no arguments, just open VS Code
-  if [ $# -eq 0 ]; then
-    open -a "Visual Studio Code" --args --extensions-dir="$VSCODE_EXTENSIONS" --user-data-dir="$VSCODE_USER_DATA_DIR"
-  else
-    # If arguments are provided, open files with VS Code
-    open -a "Visual Studio Code" "$@" --args --extensions-dir="$VSCODE_EXTENSIONS" --user-data-dir="$VSCODE_USER_DATA_DIR"
-  fi
-}
+# Create a launcher script for VS Code
+cat > "/Volumes/BrainFuck/42_ToolBox/bin/code-launcher.sh" << 'EOF'
+#!/bin/bash
+# VS Code launcher that uses external drive for extensions
 
-# Create code alias that uses our function
-alias code="vscode"
+VSCODE_EXTENSIONS="/Volumes/BrainFuck/42_ToolBox/vscode/extensions"
+VSCODE_USER_DATA_DIR="/Volumes/BrainFuck/42_ToolBox/vscode/user-data"
+
+# Ensure directories exist
+mkdir -p "$VSCODE_EXTENSIONS"
+mkdir -p "$VSCODE_USER_DATA_DIR"
+
+# Launch VS Code
+if [ $# -eq 0 ]; then
+  # No arguments
+  open -a "Visual Studio Code" --args --extensions-dir="$VSCODE_EXTENSIONS" --user-data-dir="$VSCODE_USER_DATA_DIR"
+else
+  # With arguments (files to open)
+  open -a "Visual Studio Code" "$@" --args --extensions-dir="$VSCODE_EXTENSIONS" --user-data-dir="$VSCODE_USER_DATA_DIR"
+fi
+EOF
+
+# Make it executable
+mkdir -p "/Volumes/BrainFuck/42_ToolBox/bin"
+chmod +x "/Volumes/BrainFuck/42_ToolBox/bin/code-launcher.sh"
+
+# Create alias for the launcher
+alias code="/Volumes/BrainFuck/42_ToolBox/bin/code-launcher.sh"
 
 # Original VS Code command
 alias default-code="open -a 'Visual Studio Code'"
