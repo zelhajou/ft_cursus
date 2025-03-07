@@ -920,6 +920,10 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 
 ## Skills
 
+<!--
+[![My Skills](https://skillicons.dev/icons?i=c,cpp,linux,ubuntu,apple,bash,git,vscode,vim,emacs,md,latex,docker,github,figma,html,css,javascript,nginx)](https://skillicons.dev)
+-->
+
 ### 🔧 Programming & Development
 - **Languages:** C, C++, Bash, HTML/CSS, JavaScript
 - **Core Skills:** Memory management, data structures, algorithms, OOP
@@ -944,8 +948,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 - **Development:** Code review, documentation, debugging, testing
 - **Collaboration:** Team projects, pair programming, project management
 - **Problem Solving:** Algorithm design, optimization, architectural planning
-
-[![My Skills](https://skillicons.dev/icons?i=c,cpp,linux,ubuntu,apple,bash,git,vscode,vim,emacs,md,latex,docker,github,figma,html,css,javascript,nginx)](https://skillicons.dev)
 
 
 <!--
