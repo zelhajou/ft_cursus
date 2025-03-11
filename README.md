@@ -727,7 +727,7 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <strong>CPP Modules<br>(05-09)</strong>
 </a><br>
 <img src="https://img.shields.io/badge/Solo-Project-blue"/>
-<img src="https://img.shields.io/badge/Status-In_Progress-blue"/>
+<img src="https://img.shields.io/badge/Score-100%2F100-success"/>
 </div>
 </td>
 <td><strong>Objective</strong>: Advanced C++ concepts and Standard Template Library utilization</td>
