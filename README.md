@@ -920,6 +920,9 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 
 ## Skills
 
+
+![zelhajou's 42 skills](https://web-42-widgets.vercel.app/api/widget/skills/zelhajou?theme=dark)
+
 <!--
 [![My Skills](https://skillicons.dev/icons?i=c,cpp,linux,ubuntu,apple,bash,git,vscode,vim,emacs,md,latex,docker,github,figma,html,css,javascript,nginx)](https://skillicons.dev)
 -->
