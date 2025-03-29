@@ -923,7 +923,7 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 
 <div align="center">
     
-![zelhajou's 42 skills](https://web-42-widgets.vercel.app/api/widget/skills/zelhajou?theme=dark)
+![zelhajou's 42 skills](https://42term.vercel.app/api/widget/skills/zelhajou?theme=dark)
 
 </div>
 
