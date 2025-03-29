@@ -103,9 +103,9 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42-libft">
 <strong>libft</strong>
-</a><br>
+</a><!--<br>
 <img src="https://img.shields.io/badge/Score-122%2F100-success"/>
-</div>
+</div> -->
 </td>
 <td><strong>Objective</strong>: Create a custom C library implementing standard functions and additional utilities</td>
 </tr>
@@ -142,8 +142,9 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42-ft_printf">
 <strong>ft_printf</strong>
-</a><br>
+</a><!--<br>
 <img src="https://img.shields.io/badge/Score-100%2F100-success"/>
+     -->
 </div>
 </td>
 <td><strong>Objective</strong>: Recreate the printf function with core format specifiers and various flags</td>
@@ -181,8 +182,9 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42-get_next_line">
 <strong>get_next_line</strong>
-</a><br>
+</a><!--<br>
 <img src="https://img.shields.io/badge/Score-125%2F100-success"/>
+ -->
 </div>
 </td>
 <td><strong>Objective</strong>: Develop a function that reads lines from file descriptors</td>
@@ -242,8 +244,9 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42-Born2beRoot">
 <strong>Born2beroot</strong>
-</a><br>
-<img src="https://img.shields.io/badge/Score-108%2F100-success"/>
+</a><!--<br>
+ <img src="https://img.shields.io/badge/Score-108%2F100-success"/>
+     -->
 </div>
 </td>
 <td><strong>Objective</strong>: Set up and configure a secure Linux server with strict rules</td>
@@ -281,8 +284,10 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42-minitalk">
 <strong>Minitalk</strong>
-</a><br>
-<img src="https://img.shields.io/badge/Score-100%2F100-success"/>
+</a>
+<!--<br>
+<img src="https://img.shields.io/badge/Score-100%2F100-success"/> -->
+    
 </div>
 </td>
 <td><strong>Objective</strong>: Create a client-server communication system using UNIX signals</td>
@@ -320,8 +325,10 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42-Philosophers">
 <strong>Philosophers</strong>
-</a><br>
-<img src="https://img.shields.io/badge/Score-100%2F100-success"/>
+</a>
+<!-- <br>
+<img src="https://img.shields.io/badge/Score-100%2F100-success"/> -->
+    
 </div>
 </td>
 <td><strong>Objective</strong>: Solve the dining philosophers problem using threads and mutexes</td>
@@ -359,9 +366,9 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42-minishell">
 <strong>Minishell</strong>
-</a><br>
+</a><!--<br>
 <img src="https://img.shields.io/badge/Team-2_Members-orange"/>
-<img src="https://img.shields.io/badge/Score-101%2F100-success"/>
+<img src="https://img.shields.io/badge/Score-101%2F100-success"/> -->
 </div>
 </td>
 <td><strong>Objective</strong>: Create a basic shell interpreter similar to bash</td>
@@ -421,8 +428,8 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42-push_swap">
 <strong>Push_swap</strong>
-</a><br>
-<img src="https://img.shields.io/badge/Score-125%2F100-success"/>
+</a><!--<br>
+<img src="https://img.shields.io/badge/Score-125%2F100-success"/> -->
 </div>
 </td>
 <td><strong>Objective</strong>: Develop an efficient sorting algorithm using two stacks with limited operations</td>
@@ -482,8 +489,8 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42-fractol">
 <strong>Fract-ol</strong>
-</a><br>
-<img src="https://img.shields.io/badge/Score-100%2F100-success"/>
+</a><!--<br>
+<img src="https://img.shields.io/badge/Score-100%2F100-success"/> -->
 </div>
 </td>
 <td><strong>Objective</strong>: Create a graphical program to explore and render various fractals</td>
@@ -521,9 +528,9 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42cursus-cub3D">
 <strong>Cub3D</strong>
-</a><br>
+ </a><!--<br>
 <img src="https://img.shields.io/badge/Team-2_Members-orange"/>
-<img src="https://img.shields.io/badge/Score-115%2F100-success"/>
+<img src="https://img.shields.io/badge/Score-115%2F100-success"/> -->
 </div>
 </td>
 <td><strong>Objective</strong>: Develop a 3D game engine using raycasting techniques</td>
@@ -582,8 +589,9 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42-net_practice">
 <strong>NetPractice</strong>
-</a><br>
-<img src="https://img.shields.io/badge/Score-100%2F100-success"/>
+</a> 
+<!--     <br>
+<img src="https://img.shields.io/badge/Score-100%2F100-success"/> -->
 </div>
 </td>
 <td><strong>Objective</strong>: Master network configuration and TCP/IP fundamentals</td>
@@ -621,9 +629,10 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42cursus-webserv">
 <strong>Webserv</strong>
-</a><br>
+</a>
+<!--     <br>
 <img src="https://img.shields.io/badge/Team-3_Members-orange"/>
-<img src="https://img.shields.io/badge/Score-125%2F100-success"/>
+<img src="https://img.shields.io/badge/Score-125%2F100-success"/> -->
 </div>
 </td>
 <td><strong>Objective</strong>: Build an HTTP/1.1 compliant web server from scratch</td>
@@ -683,8 +692,9 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42cursus-cpp-modules">
 <strong>CPP Modules<br>(00-04)</strong>
-</a><br>
-<img src="https://img.shields.io/badge/Score-100%2F100-success"/>
+</a>
+<!--     <br>
+<img src="https://img.shields.io/badge/Score-100%2F100-success"/> -->
 </div>
 </td>
 <td><strong>Objective</strong>: Master fundamental C++ concepts and OOP principles</td>
@@ -722,8 +732,9 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42cursus-cpp-modules">
 <strong>CPP Modules<br>(05-09)</strong>
-</a><br>
-<img src="https://img.shields.io/badge/Score-100%2F100-success"/>
+</a>
+<!--     <br>
+<img src="https://img.shields.io/badge/Score-100%2F100-success"/> -->
 </div>
 </td>
 <td><strong>Objective</strong>: Advanced C++ concepts and Standard Template Library utilization</td>
@@ -782,8 +793,9 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42cursus-inception">
 <strong>Inception</strong>
-</a><br>
-<img src="https://img.shields.io/badge/Score-100%2F100-success"/>
+</a>
+<!--     <br>
+<img src="https://img.shields.io/badge/Score-100%2F100-success"/> -->
 </div>
 </td>
 <td><strong>Objective</strong>: Set up a complete containerized web infrastructure using Docker</td>
@@ -844,10 +856,11 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <div align="center">
 <a href="https://github.com/zelhajou/42cursus-ft_transcendence">
 <strong>ft_transcendence</strong>
-</a><br>
+</a>
+<!--     <br>
 <img src="https://img.shields.io/badge/Team-4_Members-orange
 "/>
-<img src="https://img.shields.io/badge/Status-In_Progress-blue"/>
+<img src="https://img.shields.io/badge/Status-In_Progress-blue"/> -->
 </div>
 </td>
 <td><strong>Objective</strong>: Create a full-stack web application featuring real-time multiplayer game and social features</td>
