@@ -1,8 +1,4 @@
 
-
-<!--
-![Frame 1 (2)](https://github.com/user-attachments/assets/1d01f499-41e3-40c8-8bf7-709f48db0c01)
--->
 ## Hey! 👋
 
 This is where I keep all my coding projects from my time at [42](https://42.fr/en/homepage/). I'm studying at [1337](https://1337.ma/en/) (part of the [42](https://42.fr/en/homepage/) Network) and I'm learning everything from scratch - starting with C programming and working my way up to building entire web apps.
@@ -10,6 +6,12 @@ This is where I keep all my coding projects from my time at [42](https://42.fr/e
 What makes 42 different is there are no teachers and no lectures. Instead, you figure things out on your own, work on real projects, and learn alongside other students. Every project has to go through peer reviews (we call them "corrections") before you can move forward. It's intense, but it's a great way to learn how to code and solve problems.
 
 In this repo, you'll find my progress through the whole curriculum - from basic stuff like coding my own C library to more complex projects like building web servers and creating full-stack applications. Each project taught me something new about computer science and software development.
+
+<div align="center">
+
+
+
+</div>
 
 ## Table of Contents
 
@@ -70,7 +72,6 @@ These tracks allow students to specialize in their preferred areas of software d
 ## Projects
 
 The following table lists the projects I've completed as part of the 42 Cursus. Each project is linked to its repository, where you can find the project's description, requirements, and my implementation.
-
 
 
 ### Core Programming Fundamentals
