@@ -71,6 +71,12 @@ These tracks allow students to specialize in their preferred areas of software d
 
 ## Projects
 
+<div align="center">
+
+![zelhajou's 42 projects](https://42term.vercel.app/api/widget/projects/zelhajou?theme=dark)
+
+</div>
+
 The following table lists the projects I've completed as part of the 42 Cursus. Each project is linked to its repository, where you can find the project's description, requirements, and my implementation.
 
 
@@ -98,7 +104,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <a href="https://github.com/zelhajou/42-libft">
 <strong>libft</strong>
 </a><br>
-<img src="https://img.shields.io/badge/Solo-Project-blue"/>
 <img src="https://img.shields.io/badge/Score-122%2F100-success"/>
 </div>
 </td>
@@ -138,7 +143,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <a href="https://github.com/zelhajou/42-ft_printf">
 <strong>ft_printf</strong>
 </a><br>
-<img src="https://img.shields.io/badge/Solo-Project-blue"/>
 <img src="https://img.shields.io/badge/Score-100%2F100-success"/>
 </div>
 </td>
@@ -178,7 +182,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <a href="https://github.com/zelhajou/42-get_next_line">
 <strong>get_next_line</strong>
 </a><br>
-<img src="https://img.shields.io/badge/Solo-Project-blue"/>
 <img src="https://img.shields.io/badge/Score-125%2F100-success"/>
 </div>
 </td>
@@ -240,7 +243,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <a href="https://github.com/zelhajou/42-Born2beRoot">
 <strong>Born2beroot</strong>
 </a><br>
-<img src="https://img.shields.io/badge/Solo-Project-blue"/>
 <img src="https://img.shields.io/badge/Score-108%2F100-success"/>
 </div>
 </td>
@@ -280,7 +282,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <a href="https://github.com/zelhajou/42-minitalk">
 <strong>Minitalk</strong>
 </a><br>
-<img src="https://img.shields.io/badge/Solo-Project-blue"/>
 <img src="https://img.shields.io/badge/Score-100%2F100-success"/>
 </div>
 </td>
@@ -320,7 +321,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <a href="https://github.com/zelhajou/42-Philosophers">
 <strong>Philosophers</strong>
 </a><br>
-<img src="https://img.shields.io/badge/Solo-Project-blue"/>
 <img src="https://img.shields.io/badge/Score-100%2F100-success"/>
 </div>
 </td>
@@ -422,7 +422,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <a href="https://github.com/zelhajou/42-push_swap">
 <strong>Push_swap</strong>
 </a><br>
-<img src="https://img.shields.io/badge/Solo-Project-blue"/>
 <img src="https://img.shields.io/badge/Score-125%2F100-success"/>
 </div>
 </td>
@@ -484,7 +483,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <a href="https://github.com/zelhajou/42-fractol">
 <strong>Fract-ol</strong>
 </a><br>
-<img src="https://img.shields.io/badge/Solo-Project-blue"/>
 <img src="https://img.shields.io/badge/Score-100%2F100-success"/>
 </div>
 </td>
@@ -585,7 +583,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <a href="https://github.com/zelhajou/42-net_practice">
 <strong>NetPractice</strong>
 </a><br>
-<img src="https://img.shields.io/badge/Solo-Project-blue"/>
 <img src="https://img.shields.io/badge/Score-100%2F100-success"/>
 </div>
 </td>
@@ -687,7 +684,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <a href="https://github.com/zelhajou/42cursus-cpp-modules">
 <strong>CPP Modules<br>(00-04)</strong>
 </a><br>
-<img src="https://img.shields.io/badge/Solo-Project-blue"/>
 <img src="https://img.shields.io/badge/Score-100%2F100-success"/>
 </div>
 </td>
@@ -727,7 +723,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <a href="https://github.com/zelhajou/42cursus-cpp-modules">
 <strong>CPP Modules<br>(05-09)</strong>
 </a><br>
-<img src="https://img.shields.io/badge/Solo-Project-blue"/>
 <img src="https://img.shields.io/badge/Score-100%2F100-success"/>
 </div>
 </td>
@@ -788,7 +783,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <a href="https://github.com/zelhajou/42cursus-inception">
 <strong>Inception</strong>
 </a><br>
-<img src="https://img.shields.io/badge/Solo-Project-blue"/>
 <img src="https://img.shields.io/badge/Score-100%2F100-success"/>
 </div>
 </td>
