@@ -11,6 +11,8 @@ What makes 42 different is there are no teachers and no lectures. Instead, you f
 
 In this repo, you'll find my progress through the whole curriculum - from basic stuff like coding my own C library to more complex projects like building web servers and creating full-stack applications. Each project taught me something new about computer science and software development.
 
+![zelhajou's 42 profile](https://web-42-widgets.vercel.app/api/widget/student/zelhajou?theme=dark)
+
 ## Table of Contents
 
 - 📚 [Curriculum](#curriculum)
