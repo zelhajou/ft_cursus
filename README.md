@@ -9,7 +9,7 @@ In this repo, you'll find my progress through the whole curriculum - from basic 
 
 <div align="center">
 
-![zelhajou's 42 profile](https://42term.vercel.app/api/widget/student/zelhajou?theme=dark)
+<img src="https://42term.vercel.app/api/widget/student/zelhajou?theme=dark" alt="zelhajou's 42 student" />
 
 </div>
 
@@ -73,7 +73,7 @@ These tracks allow students to specialize in their preferred areas of software d
 
 <div align="center">
 
-![zelhajou's 42 projects](https://42term.vercel.app/api/widget/projects/zelhajou?theme=dark)
+<img src="https://42term.vercel.app/api/widget/projects/zelhajou?theme=dark" alt="zelhajou's 42 projects" />
 
 </div>
 
@@ -930,7 +930,7 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 
 <div align="center">
     
-![zelhajou's 42 skills](https://42term.vercel.app/api/widget/skills/zelhajou?theme=dark)
+<img src="https://42term.vercel.app/api/widget/skills/zelhajou?theme=dark" alt="zelhajou's 42 skills" />
 
 </div>
 
@@ -969,8 +969,7 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 
 <div align="center">
 
-[![zelhajou's 42 stats](https://badge.mediaplus.ma/binary/zelhajou)](https://github.com/oakoudad/badge42)
-
+<img src="https://42term.vercel.app/api/widget/skills/zelhajou?theme=dark" alt="zelhajou's 42 skills" />
 </div>
 
 **GitHub Stats**
