@@ -9,7 +9,6 @@ In this repo, you'll find my progress through the whole curriculum - from basic 
 
 <div align="center">
 
-[![zelhajou's 42 profile](https://42term.vercel.app/api/widget/student/zelhajou?theme=dark)](https://42term.vercel.app)
 
 </div>
 
