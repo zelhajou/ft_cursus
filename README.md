@@ -9,7 +9,7 @@ In this repo, you'll find my progress through the whole curriculum - from basic 
 
 <div align="center">
 
-<img src="https://42term.vercel.app/api/widget/student/zelhajou?theme=dark" alt="zelhajou's 42 student" />
+[![zelhajou's 42 profile](https://42term.vercel.app/api/widget/student/zelhajou?theme=dark)](https://42term.vercel.app)
 
 </div>
 
@@ -73,7 +73,7 @@ These tracks allow students to specialize in their preferred areas of software d
 
 <div align="center">
 
-<img src="https://42term.vercel.app/api/widget/projects/zelhajou?theme=dark" alt="zelhajou's 42 projects" />
+[![zelhajou's 42 projects](https://42term.vercel.app/api/widget/projects/zelhajou?theme=dark)](https://42term.vercel.app)
 
 </div>
 
@@ -896,7 +896,7 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 
 <div align="center">
     
-<img src="https://42term.vercel.app/api/widget/skills/zelhajou?theme=dark" alt="zelhajou's 42 skills" />
+[![zelhajou's 42 skills](https://42term.vercel.app/api/widget/skills/zelhajou?theme=dark)](https://42term.vercel.app)
 
 </div>
 
