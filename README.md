@@ -674,30 +674,27 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <tr>
 <td colspan="2">
 <div align="center">
-
 #### Modern C++ Development
 <img src="https://img.shields.io/badge/Focus-Modern_C++-00599C?style=flat&logo=cplusplus"/>
 <img src="https://img.shields.io/badge/Focus-OOP-4CAF50?style=flat"/>
 </div>
 </td>
 </tr>
-
 <tr>
 <th width="200px">Project</th>
 <th width="1200px">Details</th>
 </tr>
-
 <tr>
 <td rowspan="4">
 <div align="center">
 <a href="https://github.com/zelhajou/42cursus-cpp-modules">
-<strong>CPP Modules<br>(00-04)</strong>
+<strong>CPP Modules<br>(00-09)</strong>
 </a>
 <!--     <br>
 <img src="https://img.shields.io/badge/Score-100%2F100-success"/> -->
 </div>
 </td>
-<td><strong>Objective</strong>: Master fundamental C++ concepts and OOP principles</td>
+<td><strong>Objective</strong>: Master fundamental and advanced C++ concepts, OOP principles, and Standard Template Library utilization</td>
 </tr>
 <tr>
 <td><strong>Implementation</strong>:
@@ -706,42 +703,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <li>Inheritance and polymorphism</li>
 <li>Memory management in C++</li>
 <li>Operator overloading</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td><strong>Technical Stack</strong>:<br>
-<img src="https://img.shields.io/badge/C++-00599C?logo=cplusplus&logoColor=white"/>
-<img src="https://img.shields.io/badge/OOP-Design-orange"/>
-<img src="https://img.shields.io/badge/Memory_Management-555555?style=flat"/>
-</td>
-</tr>
-<tr>
-<td><strong>Key Learnings</strong>:
-<ul>
-<li>Object-oriented design principles</li>
-<li>Class implementation techniques</li>
-<li>C++ memory management</li>
-<li>SOLID principles</li>
-</ul>
-</td>
-</tr>
-
-<tr>
-<td rowspan="4">
-<div align="center">
-<a href="https://github.com/zelhajou/42cursus-cpp-modules">
-<strong>CPP Modules<br>(05-09)</strong>
-</a>
-<!--     <br>
-<img src="https://img.shields.io/badge/Score-100%2F100-success"/> -->
-</div>
-</td>
-<td><strong>Objective</strong>: Advanced C++ concepts and Standard Template Library utilization</td>
-</tr>
-<tr>
-<td><strong>Implementation</strong>:
-<ul>
 <li>Template programming</li>
 <li>STL containers and algorithms</li>
 <li>Exception handling</li>
@@ -752,6 +713,8 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <tr>
 <td><strong>Technical Stack</strong>:<br>
 <img src="https://img.shields.io/badge/C++-00599C?logo=cplusplus&logoColor=white"/>
+<img src="https://img.shields.io/badge/OOP-Design-orange"/>
+<img src="https://img.shields.io/badge/Memory_Management-555555?style=flat"/>
 <img src="https://img.shields.io/badge/STL-Library-orange"/>
 <img src="https://img.shields.io/badge/Template_Programming-555555?style=flat"/>
 </td>
@@ -759,6 +722,10 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <tr>
 <td><strong>Key Learnings</strong>:
 <ul>
+<li>Object-oriented design principles</li>
+<li>Class implementation techniques</li>
+<li>C++ memory management</li>
+<li>SOLID principles</li>
 <li>Advanced template techniques</li>
 <li>STL container usage</li>
 <li>Error handling strategies</li>
@@ -766,7 +733,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 </ul>
 </td>
 </tr>
-
 </table>
 
 
