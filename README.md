@@ -935,7 +935,8 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 
 <div align="center">
 
-<img src="https://42term.vercel.app/api/widget/skills/zelhajou?theme=dark" alt="zelhajou's 42 skills" />
+![zelhajou's 42 stats](https://badge.mediaplus.ma/binary/zelhajou)
+
 </div>
 
 **GitHub Stats**
