@@ -674,6 +674,7 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <tr>
 <td colspan="2">
 <div align="center">
+    
 #### Modern C++ Development
 <img src="https://img.shields.io/badge/Focus-Modern_C++-00599C?style=flat&logo=cplusplus"/>
 <img src="https://img.shields.io/badge/Focus-OOP-4CAF50?style=flat"/>
