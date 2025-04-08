@@ -1000,3 +1000,6 @@ Feel free to reach out to me if you have any questions, suggestions, or just wan
 ![8rtdcmuc8jk51](https://github.com/user-attachments/assets/6d614260-90e0-43b1-afb7-97f8e8f9f247)
 
 </div>
+
+---
+© 2025 zelhajou. All rights reserved. This portfolio documentation may not be reproduced or used as a template for personal portfolios.
