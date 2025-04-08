@@ -980,6 +980,7 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <td><strong>Key Learnings</strong>:
 <ul>
 <li>Educational application design principles</li>
+<li>OAuth integration with 42's API</li>
 <li>Memory retention algorithms</li>
 <li>User experience optimization for learning</li>
 </ul>
@@ -1018,8 +1019,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <ul>
 <li>API development and service architecture</li>
 <li>Dynamic SVG generation</li>
-<li>OAuth integration with 42's API</li>
-<li>Responsive design for various platforms</li>
 </ul>
 </td>
 </tr>
