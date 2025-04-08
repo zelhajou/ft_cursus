@@ -912,6 +912,45 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <tr>
 <td rowspan="4">
 <div align="center">
+<a href="https://github.com/zelhajou/web-pmerge-me-visualizer">
+<strong>pmerge-me-visualizer</strong>
+</a>
+</div>
+</td>
+<td><strong>Objective</strong>: A web application that visualizes the Ford-Johnson (merge-insert) sorting algorithm</td>
+</tr>
+<tr>
+<td><strong>Implementation</strong>:
+<ul>
+<li>Step-by-step algorithm visualization</li>
+<li>Interactive controls for algorithm speed and data input</li>
+<li>Educational explanations for each phase</li>
+<li>Comparison with other sorting algorithms</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Technical Stack</strong>:<br>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black"/>
+
+</td>
+</tr>
+<tr>
+<td><strong>Key Learnings</strong>:
+<ul>
+<li>Algorithm visualization techniques</li>
+<li>Interactive data presentations</li>
+<li>Advanced sorting algorithm implementation</li>
+<li>Educational content development</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td rowspan="4">
+<div align="center">
 <a href="https://github.com/zelhajou/web-42Recall">
 <strong>42Recall</strong>
 </a>
@@ -985,43 +1024,6 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 </td>
 </tr>
 
-<tr>
-<td rowspan="4">
-<div align="center">
-<a href="https://github.com/zelhajou/pmerge-me-visualizer">
-<strong>pmerge-me-visualizer</strong>
-</a>
-</div>
-</td>
-<td><strong>Objective</strong>: A web application that visualizes the Ford-Johnson (merge-insert) sorting algorithm</td>
-</tr>
-<tr>
-<td><strong>Implementation</strong>:
-<ul>
-<li>Step-by-step algorithm visualization</li>
-<li>Interactive controls for algorithm speed and data input</li>
-<li>Educational explanations for each phase</li>
-<li>Comparison with other sorting algorithms</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td><strong>Technical Stack</strong>:<br>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black"/>
-<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black"/>
-
-</td>
-</tr>
-<tr>
-<td><strong>Key Learnings</strong>:
-<ul>
-<li>Algorithm visualization techniques</li>
-<li>Interactive data presentations</li>
-<li>Advanced sorting algorithm implementation</li>
-<li>Educational content development</li>
-</ul>
-</td>
-</tr>
 
 </table>
 
