@@ -876,7 +876,7 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <img src="https://img.shields.io/badge/Exam%2005-100%2F100-success"/>
 </div>
 
-## Project Progression Map
+### Project Progression Map
 
 <div align="center">
 
@@ -888,6 +888,142 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 
 
 </div>
+
+
+## Personal Projects
+<table>
+<tr>
+<td colspan="2">
+<div align="center">
+
+#### 42 Community Tools & Educational Resources
+<img src="https://img.shields.io/badge/Focus-Learning_Tools-FF6B6B?style=flat"/>
+<img src="https://img.shields.io/badge/Focus-Visualization-4CAF50?style=flat"/>
+</div>
+</td>
+</tr>
+
+<tr>
+<th width="200px">Project</th>
+<th width="1200px">Details</th>
+</tr>
+
+<tr>
+<td rowspan="4">
+<div align="center">
+<a href="https://github.com/zelhajou/web-42Recall">
+<strong>42Recall</strong>
+</a>
+</div>
+</td>
+<td><strong>Objective</strong>: A spaced repetition flashcard application designed specifically for 42 School students to enhance their learning journey</td>
+</tr>
+<tr>
+<td><strong>Implementation</strong>:
+<ul>
+<li>Spaced repetition algorithm optimized for programming concepts</li>
+<li>42-specific content covering the core curriculum</li>
+<li>Progress tracking and retention metrics</li>
+<li>Mobile-friendly interface for on-the-go learning</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Technical Stack</strong>:<br>
+<img src="https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white"/>
+<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black"/>
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black"/>
+</td>
+</tr>
+<tr>
+<td><strong>Key Learnings</strong>:
+<ul>
+<li>Educational application design principles</li>
+<li>Memory retention algorithms</li>
+<li>User experience optimization for learning</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td rowspan="4">
+<div align="center">
+<a href="https://github.com/zelhajou/web-42term">
+<strong>42term</strong>
+</a>
+</div>
+</td>
+<td><strong>Objective</strong>: Generate beautiful terminal-style widgets to showcase 42 school achievements on GitHub and other platforms</td>
+</tr>
+<tr>
+<td><strong>Implementation</strong>:
+<ul>
+<li>Dynamic widget generation API</li>
+<li>Custom styling options with terminal aesthetics</li>
+<li>Integration with 42 API for real-time data</li>
+<li>Multiple widget types (projects, stats, skills)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Technical Stack</strong>:<br>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black"/>
+
+</td>
+</tr>
+<tr>
+<td><strong>Key Learnings</strong>:
+<ul>
+<li>API development and service architecture</li>
+<li>Dynamic SVG generation</li>
+<li>OAuth integration with 42's API</li>
+<li>Responsive design for various platforms</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td rowspan="4">
+<div align="center">
+<a href="https://github.com/zelhajou/pmerge-me-visualizer">
+<strong>pmerge-me-visualizer</strong>
+</a>
+</div>
+</td>
+<td><strong>Objective</strong>: A web application that visualizes the Ford-Johnson (merge-insert) sorting algorithm</td>
+</tr>
+<tr>
+<td><strong>Implementation</strong>:
+<ul>
+<li>Step-by-step algorithm visualization</li>
+<li>Interactive controls for algorithm speed and data input</li>
+<li>Educational explanations for each phase</li>
+<li>Comparison with other sorting algorithms</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Technical Stack</strong>:<br>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black"/>
+
+</td>
+</tr>
+<tr>
+<td><strong>Key Learnings</strong>:
+<ul>
+<li>Algorithm visualization techniques</li>
+<li>Interactive data presentations</li>
+<li>Advanced sorting algorithm implementation</li>
+<li>Educational content development</li>
+</ul>
+</td>
+</tr>
+
+</table>
+
 
 ## Skills
 
