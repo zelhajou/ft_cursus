@@ -891,7 +891,7 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 </div>
 
 
-## 💡 Personal Projects
+## Personal Projects
 <table>
 <tr>
 <td colspan="2">
