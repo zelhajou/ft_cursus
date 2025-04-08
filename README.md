@@ -26,7 +26,8 @@ In this repo, you'll find my progress through the whole curriculum - from basic 
     - ☁️ [DevOps & Cloud](#devops--cloud)
     - 🏗️ [Full-Stack Development](#full-stack-development)
     - 🏆 [Achievement Summary](#achievement-summary)
-- 🗺️ [Project Progression Map](#project-progression-map)
+    - 🗺️ [Project Progression Map](#project-progression-map)
+- 💡 [Personal Projects](#personal-projects)
 - 🛠️ [Skills](#skills)
 - 📊 [Stats](#stats)
 - 📝 [Blogs and Articles](#blogs-and-articles)
@@ -890,7 +891,7 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 </div>
 
 
-## Personal Projects
+## 💡 Personal Projects
 <table>
 <tr>
 <td colspan="2">
