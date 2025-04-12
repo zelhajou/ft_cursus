@@ -1035,6 +1035,8 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 
 </div>
 
+
+
 <!--
 [![My Skills](https://skillicons.dev/icons?i=c,cpp,linux,ubuntu,apple,bash,git,vscode,vim,emacs,md,latex,docker,github,figma,html,css,javascript,nginx)](https://skillicons.dev)
 -->
@@ -1063,6 +1065,20 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 - **Development:** Code review, documentation, debugging, testing
 - **Collaboration:** Team projects, pair programming, project management
 - **Problem Solving:** Algorithm design, optimization, architectural planning
+
+<div align="center">
+    
+| C         | C++       | Linux     | Ubuntu    | Apple     | Bash      | Git       | VSCode    |
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+| ![C](https://skillicons.dev/icons?i=c) | ![C++](https://skillicons.dev/icons?i=cpp) | ![Linux](https://skillicons.dev/icons?i=linux) | ![Ubuntu](https://skillicons.dev/icons?i=ubuntu) | ![Apple](https://skillicons.dev/icons?i=apple) | ![Bash](https://skillicons.dev/icons?i=bash) | ![Git](https://skillicons.dev/icons?i=git) | ![VSCode](https://skillicons.dev/icons?i=vscode) |
+| **Vim**       | **Emacs**     | **Markdown**  | **LaTeX**     | **Docker**    | **GitHub**    | **Figma**     | **HTML**      |
+| ![Vim](https://skillicons.dev/icons?i=vim) | ![Emacs](https://skillicons.dev/icons?i=emacs) | ![Markdown](https://skillicons.dev/icons?i=md) | ![LaTeX](https://skillicons.dev/icons?i=latex) | ![Docker](https://skillicons.dev/icons?i=docker) | ![GitHub](https://skillicons.dev/icons?i=github) | ![Figma](https://skillicons.dev/icons?i=figma) | ![HTML](https://skillicons.dev/icons?i=html) |
+| **CSS**       | **JavaScript** | **Nginx**     | **Python**    | **Django**    | **PostgreSQL**| **Redis**     | **React**     |
+| ![CSS](https://skillicons.dev/icons?i=css) | ![JavaScript](https://skillicons.dev/icons?i=javascript) | ![Nginx](https://skillicons.dev/icons?i=nginx) | ![Python](https://skillicons.dev/icons?i=python) | ![Django](https://skillicons.dev/icons?i=django) | ![PostgreSQL](https://skillicons.dev/icons?i=postgres) | ![Redis](https://skillicons.dev/icons?i=redis) | ![React](https://skillicons.dev/icons?i=react) |
+| **Tailwind**  |           |           |           |           |           |           |           |
+| ![Tailwind](https://skillicons.dev/icons?i=tailwind) |           |           |           |           |           |           |           |
+
+</div>
 
 ## Stats
 
