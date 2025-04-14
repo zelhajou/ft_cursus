@@ -866,7 +866,7 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 
 #### Project Statistics
 <img src="https://img.shields.io/badge/13-Completed_Projects-success"/>
-<img src="https://img.shields.io/badge/2-In_Progress-blue"/>
+<img src="https://img.shields.io/badge/0-In_Progress-blue"/>
 <img src="https://img.shields.io/badge/4-Team_Projects-orange"/>
 <img src="https://img.shields.io/badge/106%2F100-Average_Score-success"/>
 
