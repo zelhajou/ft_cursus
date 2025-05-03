@@ -61,7 +61,9 @@ The 42 curriculum is structured like a galaxy of projects, organized in concentr
 These tracks allow students to specialize in their preferred areas of software development and computer science.
 
 
-![42 Holy Graph](https://github.com/user-attachments/assets/ccabd3a7-bd07-4e37-ad30-b8fdeb8a363c)
+<!-- ![42 Holy Graph](https://github.com/user-attachments/assets/ccabd3a7-bd07-4e37-ad30-b8fdeb8a363c) -->
+
+![holygraph](https://github.com/user-attachments/assets/9277770f-346a-4292-9f04-e0c2698b8a0f)
 
 
 **Note**: The Holy Graph visualization above maps the complete curriculum structure. The turquoise nodes indicate completed projects, while grey nodes represent projects yet to be tackled. Each connection line shows the prerequisites needed to unlock the next project, with some levels offering multiple paths to choose from.
