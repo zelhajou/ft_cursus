@@ -877,6 +877,7 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 <img src="https://img.shields.io/badge/Exam%2003-100%2F100-success"/>
 <img src="https://img.shields.io/badge/Exam%2004-100%2F100-success"/>
 <img src="https://img.shields.io/badge/Exam%2005-100%2F100-success"/>
+<img src="https://img.shields.io/badge/Exam%2006-100%2F100-success"/>
 </div>
 
 ### Project Progression Map
