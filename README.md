@@ -9,8 +9,9 @@ In this repo, you'll find my progress through the whole curriculum - from basic 
 
 <div align="center">
 
+<!--
 <a href="https://42term.vercel.app"><img src="https://42term.vercel.app/api/widget/student/zelhajou?theme=dark" alt="zelhajou's 42 student" /></a>
-
+-->
 </div>
 
 ## Table of Contents
@@ -69,12 +70,13 @@ These tracks allow students to specialize in their preferred areas of software d
 **Note**: The Holy Graph visualization above maps the complete curriculum structure. The turquoise nodes indicate completed projects, while grey nodes represent projects yet to be tackled. Each connection line shows the prerequisites needed to unlock the next project, with some levels offering multiple paths to choose from.
 
 ## Projects
-
+<!--
 <div align="center">
 
 [![zelhajou's 42 projects](https://42term.vercel.app/api/widget/projects/zelhajou?theme=dark)](https://42term.vercel.app)
 
 </div>
+-->
 
 The following table lists the projects I've completed as part of the 42 Cursus. Each project is linked to its repository, where you can find the project's description, requirements, and my implementation.
 
@@ -1031,13 +1033,13 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 
 
 ## Skills
-
+<!--
 <div align="center">
     
 [![zelhajou's 42 skills](https://42term.vercel.app/api/widget/skills/zelhajou?theme=dark)](https://42term.vercel.app)
 
 </div>
-
+-->
 
 
 <!--
