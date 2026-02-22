@@ -16,24 +16,24 @@ In this repo, you'll find my progress through the whole curriculum - from basic 
 
 ## Table of Contents
 
-- 📚 [Curriculum](#curriculum)
-- 🚀 [Projects](#projects)
-    - 💻 [Core Programming Fundamentals](#core-programming-fundamentals)
-    - 🐧 [Unix & System Programming](#unix--system-programming)
-    - 🔍 [Algorithms & Data Structures](#algorithms--data-structures)
-    - 🎨 [Computer Graphics](#computer-graphics)
-    - 🌐 [Network Programming](#network-programming)
-    - 🧩 [Object-Oriented Programming](#object-oriented-programming)
-    - ☁️ [DevOps & Cloud](#devops--cloud)
-    - 🏗️ [Full-Stack Development](#full-stack-development)
-    - 🏆 [Achievement Summary](#achievement-summary)
-    - 🗺️ [Project Progression Map](#project-progression-map)
-- 💡 [Personal Projects](#personal-projects)
-- 🛠️ [Skills](#skills)
-- 📊 [Stats](#stats)
-- 📝 [Blogs and Articles](#blogs-and-articles)
-- 📚 [Bookshelf](#bookshelf)
-- 📞 [Contact](#contact)
+- [Curriculum](#curriculum)
+- [Projects](#projects)
+    - [Core Programming Fundamentals](#core-programming-fundamentals)
+    - [Unix & System Programming](#unix--system-programming)
+    - [Algorithms & Data Structures](#algorithms--data-structures)
+    - [Computer Graphics](#computer-graphics)
+    - [Network Programming](#network-programming)
+    - [Object-Oriented Programming](#object-oriented-programming)
+    - [DevOps & Cloud](#devops--cloud)
+    - [Full-Stack Development](#full-stack-development)
+    - [Achievement Summary](#achievement-summary)
+    - [Project Progression Map](#project-progression-map)
+- [Personal Projects](#personal-projects)
+- [Skills](#skills)
+- [Stats](#stats)
+- [Blogs and Articles](#blogs-and-articles)
+- [Bookshelf](#bookshelf)
+- [Contact](#contact)
 
 
 ## Curriculum
@@ -1046,27 +1046,27 @@ The following table lists the projects I've completed as part of the 42 Cursus. 
 [![My Skills](https://skillicons.dev/icons?i=c,cpp,linux,ubuntu,apple,bash,git,vscode,vim,emacs,md,latex,docker,github,figma,html,css,javascript,nginx)](https://skillicons.dev)
 -->
 
-### 🔧 Programming & Development
+### Programming & Development
 - **Languages:** C, C++, Bash, HTML/CSS, JavaScript
 - **Core Skills:** Memory management, data structures, algorithms, OOP
 - **Tools:** Git, Make, Docker, GDB, Valgrind
 - **Environments:** VSCode, Vim, Emacs, Linux, macOS
 
-### 💻 System & Network
+### System & Network
 - **System Programming:** Process management, IPC, threading, memory optimization
 - **Network:** Socket programming, HTTP/TCP/IP, web server development
 - **Security:** System hardening, SSH, firewall configuration, authentication
 
-### 🎮 Graphics & Mathematics
+### Graphics & Mathematics
 - **Graphics:** Raycasting, 3D rendering, game physics, collision detection
 - **Mathematical:** Fractal computation, complex number operations, optimization
 
-### 🐳 DevOps & Web
+### DevOps & Web
 - **Containerization:** Docker, service configuration, container orchestration
 - **Web Development:** Full-stack applications, REST APIs, WebSockets
 - **Databases:** PostgreSQL, MariaDB, data modeling
 
-### 🛠️ Professional Practice
+### Professional Practice
 - **Development:** Code review, documentation, debugging, testing
 - **Collaboration:** Team projects, pair programming, project management
 - **Problem Solving:** Algorithm design, optimization, architectural planning
